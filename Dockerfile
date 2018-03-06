@@ -40,4 +40,4 @@ RUN tar -xz -f /tmp/atlassian-bitbucket-${BITBUCKET_VERSION}.tar.gz --strip-comp
 RUN cp /tmp/atlassian-extras-decoder-v2-3.3.0.jar ${BITBUCKET_INSTALL_DIR}/app/WEB-INF/lib
 RUN cp /tmp/atlassian-extras-legacy-3.3.0.jar ${BITBUCKET_INSTALL_DIR}/app/WEB-INF/lib
 RUN chown -R ${RUN_USER}:${RUN_GROUP} ${BITBUCKET_INSTALL_DIR}
-
+RUN rm -rf /tmp/atlassian*
